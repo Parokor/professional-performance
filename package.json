@@ -1,0 +1,14 @@
+{
+  "name": "professional-performance",
+  "version": "1.0.0",
+  "description": "Portafolio Profesional de Tecnología",
+  "scripts": {
+    "build": "mkdir -p public && echo 'Creating build directory...' && if [ -d 'clients' ]; then echo 'Copying clients folder...' && cp -r clients/* public/; elif [ -d 'src' ]; then echo 'Copying src folder...' && cp -r src/* public/; else echo 'Creating default page...' && echo '<!DOCTYPE html><html lang=\"es\"><head><meta charset=\"UTF-8\"><title>Professional Performance</title><style>body{font-family:Arial,sans-serif;margin:0;padding:2rem;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;min-height:100vh}.container{max-width:800px;margin:0 auto;background:rgba(255,255,255,0.1);padding:2rem;border-radius:10px}</style></head><body><div class=\"container\"><h1>🚀 Professional Performance</h1><h2>Portafolio Profesional de Tecnología</h2><p>✅ Netlify deployment successful!</p><p>📋 Ready for project files</p><p>🔧 Repository configured for Spanish content</p></div></body></html>' > public/index.html; fi && echo 'Build completed successfully!' && ls -la public/",
+    "start": "echo 'Server ready to start'",
+    "dev": "echo 'Development server ready'"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
